@@ -1,0 +1,622 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3A6ECD11242790F300722651 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD10242790F300722651 /* AppDelegate.m */; };
+		3A6ECD17242790F300722651 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD16242790F300722651 /* ViewController.m */; };
+		3A6ECD1A242790F300722651 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6ECD18242790F300722651 /* Main.storyboard */; };
+		3A6ECD1C242790F800722651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3A6ECD1B242790F800722651 /* Assets.xcassets */; };
+		3A6ECD1F242790F800722651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3A6ECD1D242790F800722651 /* LaunchScreen.storyboard */; };
+		3A6ECD22242790F800722651 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD21242790F800722651 /* main.m */; };
+		3A6ECD2C242790F800722651 /* ZZGlobalTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD2B242790F800722651 /* ZZGlobalTimerTests.m */; };
+		3A6ECD37242790F800722651 /* ZZGlobalTimerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD36242790F800722651 /* ZZGlobalTimerUITests.m */; };
+		3A6ECD49242791D400722651 /* ZZGlobalCountingTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD45242791D400722651 /* ZZGlobalCountingTimer.m */; };
+		3A6ECD4A242791D400722651 /* ZZGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD47242791D400722651 /* ZZGCDTimer.m */; };
+		3A6ECD4F2427927500722651 /* CountingLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD4E2427927500722651 /* CountingLabelViewController.m */; };
+		3A6ECD532427973100722651 /* CountingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD522427973100722651 /* CountingTableViewController.m */; };
+		3A6ECD562427976100722651 /* CountingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD552427976100722651 /* CountingTableViewCell.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		3A6ECD28242790F800722651 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A6ECD04242790F200722651 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A6ECD0B242790F300722651;
+			remoteInfo = ZZGlobalTimer;
+		};
+		3A6ECD33242790F800722651 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3A6ECD04242790F200722651 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3A6ECD0B242790F300722651;
+			remoteInfo = ZZGlobalTimer;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		3A6ECD0C242790F300722651 /* ZZGlobalTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZZGlobalTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A6ECD0F242790F300722651 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		3A6ECD10242790F300722651 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		3A6ECD15242790F300722651 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		3A6ECD16242790F300722651 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		3A6ECD19242790F300722651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3A6ECD1B242790F800722651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3A6ECD1E242790F800722651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		3A6ECD20242790F800722651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A6ECD21242790F800722651 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		3A6ECD27242790F800722651 /* ZZGlobalTimerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZGlobalTimerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A6ECD2B242790F800722651 /* ZZGlobalTimerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZGlobalTimerTests.m; sourceTree = "<group>"; };
+		3A6ECD2D242790F800722651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A6ECD32242790F800722651 /* ZZGlobalTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZGlobalTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3A6ECD36242790F800722651 /* ZZGlobalTimerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZGlobalTimerUITests.m; sourceTree = "<group>"; };
+		3A6ECD38242790F800722651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3A6ECD45242791D400722651 /* ZZGlobalCountingTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZGlobalCountingTimer.m; sourceTree = "<group>"; };
+		3A6ECD46242791D400722651 /* ZZGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZGCDTimer.h; sourceTree = "<group>"; };
+		3A6ECD47242791D400722651 /* ZZGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZGCDTimer.m; sourceTree = "<group>"; };
+		3A6ECD48242791D400722651 /* ZZGlobalCountingTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZGlobalCountingTimer.h; sourceTree = "<group>"; };
+		3A6ECD4D2427927500722651 /* CountingLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountingLabelViewController.h; sourceTree = "<group>"; };
+		3A6ECD4E2427927500722651 /* CountingLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingLabelViewController.m; sourceTree = "<group>"; };
+		3A6ECD512427973100722651 /* CountingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountingTableViewController.h; sourceTree = "<group>"; };
+		3A6ECD522427973100722651 /* CountingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingTableViewController.m; sourceTree = "<group>"; };
+		3A6ECD542427976100722651 /* CountingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountingTableViewCell.h; sourceTree = "<group>"; };
+		3A6ECD552427976100722651 /* CountingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingTableViewCell.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3A6ECD09242790F300722651 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A6ECD24242790F800722651 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A6ECD2F242790F800722651 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3A6ECD03242790F200722651 = {
+			isa = PBXGroup;
+			children = (
+				3A6ECD0E242790F300722651 /* ZZGlobalTimer */,
+				3A6ECD2A242790F800722651 /* ZZGlobalTimerTests */,
+				3A6ECD35242790F800722651 /* ZZGlobalTimerUITests */,
+				3A6ECD0D242790F300722651 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		3A6ECD0D242790F300722651 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3A6ECD0C242790F300722651 /* ZZGlobalTimer.app */,
+				3A6ECD27242790F800722651 /* ZZGlobalTimerTests.xctest */,
+				3A6ECD32242790F800722651 /* ZZGlobalTimerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3A6ECD0E242790F300722651 /* ZZGlobalTimer */ = {
+			isa = PBXGroup;
+			children = (
+				3A6ECD44242791C100722651 /* GlobalTimer */,
+				3A6ECD0F242790F300722651 /* AppDelegate.h */,
+				3A6ECD10242790F300722651 /* AppDelegate.m */,
+				3A6ECD15242790F300722651 /* ViewController.h */,
+				3A6ECD16242790F300722651 /* ViewController.m */,
+				3A6ECD4D2427927500722651 /* CountingLabelViewController.h */,
+				3A6ECD4E2427927500722651 /* CountingLabelViewController.m */,
+				3A6ECD512427973100722651 /* CountingTableViewController.h */,
+				3A6ECD522427973100722651 /* CountingTableViewController.m */,
+				3A6ECD542427976100722651 /* CountingTableViewCell.h */,
+				3A6ECD552427976100722651 /* CountingTableViewCell.m */,
+				3A6ECD18242790F300722651 /* Main.storyboard */,
+				3A6ECD1B242790F800722651 /* Assets.xcassets */,
+				3A6ECD1D242790F800722651 /* LaunchScreen.storyboard */,
+				3A6ECD20242790F800722651 /* Info.plist */,
+				3A6ECD21242790F800722651 /* main.m */,
+			);
+			path = ZZGlobalTimer;
+			sourceTree = "<group>";
+		};
+		3A6ECD2A242790F800722651 /* ZZGlobalTimerTests */ = {
+			isa = PBXGroup;
+			children = (
+				3A6ECD2B242790F800722651 /* ZZGlobalTimerTests.m */,
+				3A6ECD2D242790F800722651 /* Info.plist */,
+			);
+			path = ZZGlobalTimerTests;
+			sourceTree = "<group>";
+		};
+		3A6ECD35242790F800722651 /* ZZGlobalTimerUITests */ = {
+			isa = PBXGroup;
+			children = (
+				3A6ECD36242790F800722651 /* ZZGlobalTimerUITests.m */,
+				3A6ECD38242790F800722651 /* Info.plist */,
+			);
+			path = ZZGlobalTimerUITests;
+			sourceTree = "<group>";
+		};
+		3A6ECD44242791C100722651 /* GlobalTimer */ = {
+			isa = PBXGroup;
+			children = (
+				3A6ECD46242791D400722651 /* ZZGCDTimer.h */,
+				3A6ECD47242791D400722651 /* ZZGCDTimer.m */,
+				3A6ECD48242791D400722651 /* ZZGlobalCountingTimer.h */,
+				3A6ECD45242791D400722651 /* ZZGlobalCountingTimer.m */,
+			);
+			path = GlobalTimer;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3A6ECD0B242790F300722651 /* ZZGlobalTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A6ECD3B242790F800722651 /* Build configuration list for PBXNativeTarget "ZZGlobalTimer" */;
+			buildPhases = (
+				3A6ECD08242790F300722651 /* Sources */,
+				3A6ECD09242790F300722651 /* Frameworks */,
+				3A6ECD0A242790F300722651 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZZGlobalTimer;
+			productName = ZZGlobalTimer;
+			productReference = 3A6ECD0C242790F300722651 /* ZZGlobalTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+		3A6ECD26242790F800722651 /* ZZGlobalTimerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A6ECD3E242790F800722651 /* Build configuration list for PBXNativeTarget "ZZGlobalTimerTests" */;
+			buildPhases = (
+				3A6ECD23242790F800722651 /* Sources */,
+				3A6ECD24242790F800722651 /* Frameworks */,
+				3A6ECD25242790F800722651 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A6ECD29242790F800722651 /* PBXTargetDependency */,
+			);
+			name = ZZGlobalTimerTests;
+			productName = ZZGlobalTimerTests;
+			productReference = 3A6ECD27242790F800722651 /* ZZGlobalTimerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3A6ECD31242790F800722651 /* ZZGlobalTimerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3A6ECD41242790F800722651 /* Build configuration list for PBXNativeTarget "ZZGlobalTimerUITests" */;
+			buildPhases = (
+				3A6ECD2E242790F800722651 /* Sources */,
+				3A6ECD2F242790F800722651 /* Frameworks */,
+				3A6ECD30242790F800722651 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3A6ECD34242790F800722651 /* PBXTargetDependency */,
+			);
+			name = ZZGlobalTimerUITests;
+			productName = ZZGlobalTimerUITests;
+			productReference = 3A6ECD32242790F800722651 /* ZZGlobalTimerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3A6ECD04242790F200722651 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = zz;
+				TargetAttributes = {
+					3A6ECD0B242790F300722651 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					3A6ECD26242790F800722651 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 3A6ECD0B242790F300722651;
+					};
+					3A6ECD31242790F800722651 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 3A6ECD0B242790F300722651;
+					};
+				};
+			};
+			buildConfigurationList = 3A6ECD07242790F200722651 /* Build configuration list for PBXProject "ZZGlobalTimer" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3A6ECD03242790F200722651;
+			productRefGroup = 3A6ECD0D242790F300722651 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3A6ECD0B242790F300722651 /* ZZGlobalTimer */,
+				3A6ECD26242790F800722651 /* ZZGlobalTimerTests */,
+				3A6ECD31242790F800722651 /* ZZGlobalTimerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3A6ECD0A242790F300722651 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A6ECD1F242790F800722651 /* LaunchScreen.storyboard in Resources */,
+				3A6ECD1C242790F800722651 /* Assets.xcassets in Resources */,
+				3A6ECD1A242790F300722651 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A6ECD25242790F800722651 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A6ECD30242790F800722651 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3A6ECD08242790F300722651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A6ECD4F2427927500722651 /* CountingLabelViewController.m in Sources */,
+				3A6ECD17242790F300722651 /* ViewController.m in Sources */,
+				3A6ECD4A242791D400722651 /* ZZGCDTimer.m in Sources */,
+				3A6ECD11242790F300722651 /* AppDelegate.m in Sources */,
+				3A6ECD562427976100722651 /* CountingTableViewCell.m in Sources */,
+				3A6ECD49242791D400722651 /* ZZGlobalCountingTimer.m in Sources */,
+				3A6ECD22242790F800722651 /* main.m in Sources */,
+				3A6ECD532427973100722651 /* CountingTableViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A6ECD23242790F800722651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A6ECD2C242790F800722651 /* ZZGlobalTimerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3A6ECD2E242790F800722651 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A6ECD37242790F800722651 /* ZZGlobalTimerUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		3A6ECD29242790F800722651 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A6ECD0B242790F300722651 /* ZZGlobalTimer */;
+			targetProxy = 3A6ECD28242790F800722651 /* PBXContainerItemProxy */;
+		};
+		3A6ECD34242790F800722651 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3A6ECD0B242790F300722651 /* ZZGlobalTimer */;
+			targetProxy = 3A6ECD33242790F800722651 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		3A6ECD18242790F300722651 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A6ECD19242790F300722651 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		3A6ECD1D242790F800722651 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3A6ECD1E242790F800722651 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		3A6ECD39242790F800722651 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		3A6ECD3A242790F800722651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3A6ECD3C242790F800722651 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56K2M8B4JP;
+				INFOPLIST_FILE = ZZGlobalTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zz.ZZGlobalTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3A6ECD3D242790F800722651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56K2M8B4JP;
+				INFOPLIST_FILE = ZZGlobalTimer/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zz.ZZGlobalTimer;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3A6ECD3F242790F800722651 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56K2M8B4JP;
+				INFOPLIST_FILE = ZZGlobalTimerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zz.ZZGlobalTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZGlobalTimer.app/ZZGlobalTimer";
+			};
+			name = Debug;
+		};
+		3A6ECD40242790F800722651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56K2M8B4JP;
+				INFOPLIST_FILE = ZZGlobalTimerTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zz.ZZGlobalTimerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZZGlobalTimer.app/ZZGlobalTimer";
+			};
+			name = Release;
+		};
+		3A6ECD42242790F800722651 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56K2M8B4JP;
+				INFOPLIST_FILE = ZZGlobalTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zz.ZZGlobalTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZZGlobalTimer;
+			};
+			name = Debug;
+		};
+		3A6ECD43242790F800722651 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 56K2M8B4JP;
+				INFOPLIST_FILE = ZZGlobalTimerUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = zz.ZZGlobalTimerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ZZGlobalTimer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3A6ECD07242790F200722651 /* Build configuration list for PBXProject "ZZGlobalTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A6ECD39242790F800722651 /* Debug */,
+				3A6ECD3A242790F800722651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A6ECD3B242790F800722651 /* Build configuration list for PBXNativeTarget "ZZGlobalTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A6ECD3C242790F800722651 /* Debug */,
+				3A6ECD3D242790F800722651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A6ECD3E242790F800722651 /* Build configuration list for PBXNativeTarget "ZZGlobalTimerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A6ECD3F242790F800722651 /* Debug */,
+				3A6ECD40242790F800722651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3A6ECD41242790F800722651 /* Build configuration list for PBXNativeTarget "ZZGlobalTimerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3A6ECD42242790F800722651 /* Debug */,
+				3A6ECD43242790F800722651 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3A6ECD04242790F200722651 /* Project object */;
+}
