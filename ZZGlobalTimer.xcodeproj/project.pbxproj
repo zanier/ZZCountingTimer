@@ -20,6 +20,7 @@
 		3A6ECD4F2427927500722651 /* CountingLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD4E2427927500722651 /* CountingLabelViewController.m */; };
 		3A6ECD532427973100722651 /* CountingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD522427973100722651 /* CountingTableViewController.m */; };
 		3A6ECD562427976100722651 /* CountingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD552427976100722651 /* CountingTableViewCell.m */; };
+		3A6ECD59242908A300722651 /* ZZCountingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD58242908A300722651 /* ZZCountingManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		3A6ECD522427973100722651 /* CountingTableViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingTableViewController.m; sourceTree = "<group>"; };
 		3A6ECD542427976100722651 /* CountingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountingTableViewCell.h; sourceTree = "<group>"; };
 		3A6ECD552427976100722651 /* CountingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingTableViewCell.m; sourceTree = "<group>"; };
+		3A6ECD57242908A300722651 /* ZZCountingManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZZCountingManager.h; sourceTree = "<group>"; };
+		3A6ECD58242908A300722651 /* ZZCountingManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZCountingManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				3A6ECD47242791D400722651 /* ZZGCDTimer.m */,
 				3A6ECD48242791D400722651 /* ZZGlobalCountingTimer.h */,
 				3A6ECD45242791D400722651 /* ZZGlobalCountingTimer.m */,
+				3A6ECD57242908A300722651 /* ZZCountingManager.h */,
+				3A6ECD58242908A300722651 /* ZZCountingManager.m */,
 			);
 			path = GlobalTimer;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A6ECD59242908A300722651 /* ZZCountingManager.m in Sources */,
 				3A6ECD4F2427927500722651 /* CountingLabelViewController.m in Sources */,
 				3A6ECD17242790F300722651 /* ViewController.m in Sources */,
 				3A6ECD4A242791D400722651 /* ZZGCDTimer.m in Sources */,

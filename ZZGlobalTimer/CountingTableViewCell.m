@@ -12,7 +12,7 @@
 @implementation CountingTableViewCell
 
 - (void)dealloc {
-    [ZZGlobalCountingTimer unsubscribeWithKey:[self key]];
+//    [ZZGlobalCountingTimer unsubscribeWithKey:[self key]];
 }
 
 - (void)awakeFromNib {
@@ -21,10 +21,10 @@
 
 - (void)setStartDate:(NSDate *)startDate {
     __weak typeof(self) weakSelf = self;
-    [ZZGlobalCountingTimer updateOrSubscribeIfNeededWithKey:[self key] start:startDate eventHandler:^(NSString * _Nonnull key, NSDate * _Nonnull start, NSTimeInterval duration) {
-        weakSelf.textLabel.text = [NSString stringWithFormat:@"%.0f s", duration];
-        weakSelf.detailTextLabel.text = [NSString stringWithFormat:@"start at %@", start];
-    }];
+//    [ZZGlobalCountingTimer updateOrSubscribeIfNeededWithKey:[self key] start:startDate eventHandler:^(NSString * _Nonnull key, NSDate * _Nonnull start, NSTimeInterval duration) {
+//        weakSelf.textLabel.text = [NSString stringWithFormat:@"%.0f s", duration];
+//        weakSelf.detailTextLabel.text = [NSString stringWithFormat:@"start at %@", start];
+//    }];
 }
 
 - (NSString *)key {

@@ -20,8 +20,8 @@
 @implementation CountingLabelViewController
 
 - (void)dealloc {
-    [ZZGlobalCountingTimer unsubscribeWithKey:NSStringFromSelector(@selector(timingLabel0))];
-    [ZZGlobalCountingTimer unsubscribeWithKey:NSStringFromSelector(@selector(timingLabel2))];
+//    [ZZGlobalCountingTimer unsubscribeWithKey:NSStringFromSelector(@selector(timingLabel0))];
+//    [ZZGlobalCountingTimer unsubscribeWithKey:NSStringFromSelector(@selector(timingLabel2))];
 }
 
 - (void)viewDidLoad {
@@ -47,19 +47,19 @@
 }
 
 - (void)beginCounting {
-    __weak UILabel *weakTimingLabel0 = self.timingLabel0;
-    __weak UILabel *weakTimingLabel1 = self.timingLabel1;
-    [ZZGlobalCountingTimer subscribeWithKey:NSStringFromSelector(@selector(timingLabel0)) fireDate:[NSDate date] eventHandler:^(NSString * _Nonnull key, NSDate * _Nonnull start, NSTimeInterval duration) {
-        NSDate *now = [start dateByAddingTimeInterval:duration];
-        weakTimingLabel0.text = [NSString stringWithFormat:@"start: %@, duration: %.2f", start, duration];
-        weakTimingLabel1.text = [now description];
-
-    }];
-    __weak UILabel *weakTimingLabel2 = self.timingLabel2;
-    [ZZGlobalCountingTimer subscribeWithKey:NSStringFromSelector(@selector(timingLabel2)) fireDate:[NSDate date] eventHandler:^(NSString * _Nonnull key, NSDate * _Nonnull start, NSTimeInterval duration) {
-        NSDate *now = [start dateByAddingTimeInterval:duration];
-        weakTimingLabel2.text = [NSString stringWithFormat:@"start: %@, duration: %.0f, now: %@", start, duration, now];
-    }];
+//    __weak UILabel *weakTimingLabel0 = self.timingLabel0;
+//    __weak UILabel *weakTimingLabel1 = self.timingLabel1;
+//    [ZZGlobalCountingTimer subscribeWithKey:NSStringFromSelector(@selector(timingLabel0)) fireDate:[NSDate date] eventHandler:^(NSString * _Nonnull key, NSDate * _Nonnull start, NSTimeInterval duration) {
+//        NSDate *now = [start dateByAddingTimeInterval:duration];
+//        weakTimingLabel0.text = [NSString stringWithFormat:@"start: %@, duration: %.2f", start, duration];
+//        weakTimingLabel1.text = [now description];
+//
+//    }];
+//    __weak UILabel *weakTimingLabel2 = self.timingLabel2;
+//    [ZZGlobalCountingTimer subscribeWithKey:NSStringFromSelector(@selector(timingLabel2)) fireDate:[NSDate date] eventHandler:^(NSString * _Nonnull key, NSDate * _Nonnull start, NSTimeInterval duration) {
+//        NSDate *now = [start dateByAddingTimeInterval:duration];
+//        weakTimingLabel2.text = [NSString stringWithFormat:@"start: %@, duration: %.0f, now: %@", start, duration, now];
+//    }];
 }
 
 @end
