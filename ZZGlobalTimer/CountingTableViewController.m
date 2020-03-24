@@ -8,6 +8,7 @@
 
 #import "CountingTableViewController.h"
 #import "CountingTableViewCell.h"
+#import "ZZCountingManager.h"
 
 @interface CountingTableViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -17,6 +18,11 @@
 @end
 
 @implementation CountingTableViewController
+
+- (void)dealloc {
+    NSLog(@"CountingTableViewController <%p> dealloc", self);
+    NSLog(@"timerDic: %@", [ZZCountingManager share].timerDic);
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];

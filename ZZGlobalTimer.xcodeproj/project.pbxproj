@@ -15,7 +15,7 @@
 		3A6ECD22242790F800722651 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD21242790F800722651 /* main.m */; };
 		3A6ECD2C242790F800722651 /* ZZGlobalTimerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD2B242790F800722651 /* ZZGlobalTimerTests.m */; };
 		3A6ECD37242790F800722651 /* ZZGlobalTimerUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD36242790F800722651 /* ZZGlobalTimerUITests.m */; };
-		3A6ECD49242791D400722651 /* ZZGlobalCountingTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD45242791D400722651 /* ZZGlobalCountingTimer.m */; };
+		3A6ECD49242791D400722651 /* ZZCountingTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD45242791D400722651 /* ZZCountingTimer.m */; };
 		3A6ECD4A242791D400722651 /* ZZGCDTimer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD47242791D400722651 /* ZZGCDTimer.m */; };
 		3A6ECD4F2427927500722651 /* CountingLabelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD4E2427927500722651 /* CountingLabelViewController.m */; };
 		3A6ECD532427973100722651 /* CountingTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3A6ECD522427973100722651 /* CountingTableViewController.m */; };
@@ -57,10 +57,10 @@
 		3A6ECD32242790F800722651 /* ZZGlobalTimerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZZGlobalTimerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3A6ECD36242790F800722651 /* ZZGlobalTimerUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZZGlobalTimerUITests.m; sourceTree = "<group>"; };
 		3A6ECD38242790F800722651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A6ECD45242791D400722651 /* ZZGlobalCountingTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZGlobalCountingTimer.m; sourceTree = "<group>"; };
+		3A6ECD45242791D400722651 /* ZZCountingTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZCountingTimer.m; sourceTree = "<group>"; };
 		3A6ECD46242791D400722651 /* ZZGCDTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZGCDTimer.h; sourceTree = "<group>"; };
 		3A6ECD47242791D400722651 /* ZZGCDTimer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZZGCDTimer.m; sourceTree = "<group>"; };
-		3A6ECD48242791D400722651 /* ZZGlobalCountingTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZGlobalCountingTimer.h; sourceTree = "<group>"; };
+		3A6ECD48242791D400722651 /* ZZCountingTimer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZZCountingTimer.h; sourceTree = "<group>"; };
 		3A6ECD4D2427927500722651 /* CountingLabelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountingLabelViewController.h; sourceTree = "<group>"; };
 		3A6ECD4E2427927500722651 /* CountingLabelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CountingLabelViewController.m; sourceTree = "<group>"; };
 		3A6ECD512427973100722651 /* CountingTableViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CountingTableViewController.h; sourceTree = "<group>"; };
@@ -162,8 +162,8 @@
 			children = (
 				3A6ECD46242791D400722651 /* ZZGCDTimer.h */,
 				3A6ECD47242791D400722651 /* ZZGCDTimer.m */,
-				3A6ECD48242791D400722651 /* ZZGlobalCountingTimer.h */,
-				3A6ECD45242791D400722651 /* ZZGlobalCountingTimer.m */,
+				3A6ECD48242791D400722651 /* ZZCountingTimer.h */,
+				3A6ECD45242791D400722651 /* ZZCountingTimer.m */,
 				3A6ECD57242908A300722651 /* ZZCountingManager.h */,
 				3A6ECD58242908A300722651 /* ZZCountingManager.m */,
 			);
@@ -306,7 +306,7 @@
 				3A6ECD4A242791D400722651 /* ZZGCDTimer.m in Sources */,
 				3A6ECD11242790F300722651 /* AppDelegate.m in Sources */,
 				3A6ECD562427976100722651 /* CountingTableViewCell.m in Sources */,
-				3A6ECD49242791D400722651 /* ZZGlobalCountingTimer.m in Sources */,
+				3A6ECD49242791D400722651 /* ZZCountingTimer.m in Sources */,
 				3A6ECD22242790F800722651 /* main.m in Sources */,
 				3A6ECD532427973100722651 /* CountingTableViewController.m in Sources */,
 			);

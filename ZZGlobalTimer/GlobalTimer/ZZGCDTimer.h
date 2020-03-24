@@ -3,7 +3,7 @@
 //  SafeElevatorManager
 //
 //  Created by zz on 2019/10/25.
-//  Copyright © 2019 浙江再灵科技股份有限公司. All rights reserved.
+//  Copyright © 2019 zz. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
