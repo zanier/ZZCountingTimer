@@ -25,11 +25,22 @@ NS_ASSUME_NONNULL_BEGIN
 - (BOOL)isSubscribingWithObject:(id)object interval:(NSTimeInterval)interval;
 
 /// MARK: 添加订阅
-/// @param object 订阅者
-/// @param date 计时的起始时间
-/// @param interval 订阅的时间间隔
-/// @param handler 定时触发的回调
-- (void)addSubscriber:(id)object fireDate:(NSDate *)date interval:(NSTimeInterval)interval eventHandler:(void(^)(id object, NSDate *start, NSTimeInterval duration))handler;
+///
+/// @param object
+/// * 订阅者对象，会对其产生弱引用。若订阅者对象释放，则自动移除订阅
+///
+/// @param date
+/// * 计时的起始时间，以此计算获得计时的时间间隔
+///
+/// @param interval
+/// * 计时的时间间隔
+///
+/// @param handler
+/// * 每秒定时触发的回调，在后台时不会执行，使用时避免循环引用
+/// * key: 订阅的主键
+/// * start: 计时的起始时间
+/// * duration: 当前时间减去起始时间的时间间隔
+- (void)addSubscriber:(id)object fireDate:(NSDate *)date interval:(NSTimeInterval)interval eventHandler:(void(^)(id object, NSDate *startDate, NSTimeInterval duration))handler;
 
 /// MARK: 更新订阅的起始时间
 /// @param object 订阅者对象

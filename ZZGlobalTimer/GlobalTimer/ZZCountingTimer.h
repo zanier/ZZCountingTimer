@@ -8,31 +8,31 @@
 
 #import <Foundation/Foundation.h>
 
-@class ZZCountingTimer, ZZCountingTimerSubscriber;
+@class ZZCountingTimer, ZZCountingTimerSubscribe;
 
 NS_ASSUME_NONNULL_BEGIN
 
 @protocol ZZCountingTimerDelegate <NSObject>
 
 @optional
-- (void)countingTimer:(ZZCountingTimer *)countingTimer didAddSubscriber:(ZZCountingTimerSubscriber *)subscriber;
+- (void)countingTimer:(ZZCountingTimer *)countingTimer didAddSubscriber:(ZZCountingTimerSubscribe *)subscriber;
 - (void)countingTimerDidStartTimer:(ZZCountingTimer *)countingTimer;
 - (void)countingTimerDidStopTimer:(ZZCountingTimer *)countingTimer;
 
 @end
 
-/// 订阅者对象
-@interface ZZCountingTimerSubscriber : NSObject
+/// 订阅
+@interface ZZCountingTimerSubscribe : NSObject
 
-@property (nonatomic, weak) id object;              // 订阅者对象
-@property (nonatomic, copy) NSString *key;          // 订阅的主键
-@property (nonatomic, strong) NSDate *start;        // 计时的起始时间
+@property (nonatomic, weak) id object;              // 订阅对象
+//@property (nonatomic, copy) NSString *key;        // 订阅的主键
+@property (nonatomic, strong) NSDate *startDate;    // 计时的起始时间
 @property (nonatomic, assign) BOOL pause;           // 订阅是否暂停
-@property (nonatomic, copy) void (^eventHandler)(NSString *key, NSDate *start, NSTimeInterval duration); // 定时触发执行的回调
+@property (nonatomic, copy) void (^eventHandler)(id object, NSDate *startDate, NSTimeInterval duration); // 定时触发执行的回调
 
 @end
 
-/// 全局计时工具
+/// 计时工具
 /// * 创建单例维护一个 GCDTimer
 /// * 保存所有的订阅者
 /// * 每秒定时触发每个订阅者的回调

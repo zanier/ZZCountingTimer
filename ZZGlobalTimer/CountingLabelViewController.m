@@ -47,15 +47,15 @@
 }
 
 - (void)beginCounting {
-    [[ZZCountingManager share] addSubscriber:self.timingLabel0 fireDate:[NSDate date] interval:1 eventHandler:^(id  _Nonnull object, NSDate * _Nonnull start, NSTimeInterval duration) {
+    [[ZZCountingManager share] addSubscriber:self.timingLabel0 fireDate:[NSDate date] interval:1 eventHandler:^(id  _Nonnull object, NSDate * _Nonnull startDate, NSTimeInterval duration) {
         UILabel *label = (UILabel *)object;
         label.text = [NSString stringWithFormat:@"%.0f", duration];
     }];
-    [[ZZCountingManager share] addSubscriber:self.timingLabel1 fireDate:[NSDate date] interval:2 eventHandler:^(id  _Nonnull object, NSDate * _Nonnull start, NSTimeInterval duration) {
+    [[ZZCountingManager share] addSubscriber:self.timingLabel1 fireDate:[NSDate date] interval:2 eventHandler:^(id  _Nonnull object, NSDate * _Nonnull startDate, NSTimeInterval duration) {
         UILabel *label = (UILabel *)object;
         label.text = [NSString stringWithFormat:@"%.0f", duration];
     }];
-    [[ZZCountingManager share] addSubscriber:self.timingLabel2 fireDate:[NSDate date] interval:4 eventHandler:^(id  _Nonnull object, NSDate * _Nonnull start, NSTimeInterval duration) {
+    [[ZZCountingManager share] addSubscriber:self.timingLabel2 fireDate:[NSDate date] interval:4 eventHandler:^(id  _Nonnull object, NSDate * _Nonnull startDate, NSTimeInterval duration) {
         UILabel *label = (UILabel *)object;
         label.text = [NSString stringWithFormat:@"%.0f", duration];
     }];

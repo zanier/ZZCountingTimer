@@ -10,14 +10,14 @@
 #import "ZZGCDTimer.h"
 #import "ZZCountingManager.h"
 
-@implementation ZZCountingTimerSubscriber
+@implementation ZZCountingTimerSubscribe
 
 @end
 
 @interface ZZCountingTimer () {
     dispatch_semaphore_t _lock;
     ZZGCDTimer *_timer; // GCD定时器
-    NSMapTable<id, ZZCountingTimerSubscriber *> *_mapTable;
+    NSMapTable<id, ZZCountingTimerSubscribe *> *_mapTable;
 }
 
 @property (nonatomic, assign) NSTimeInterval interval;
@@ -73,7 +73,7 @@
 /// MARK: - 定时器每秒定时触发
 - (void)timerAction:(ZZGCDTimer *)timer {
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
-    NSArray<ZZCountingTimerSubscriber *> *allValues = _mapTable.objectEnumerator.allObjects;
+    NSArray<ZZCountingTimerSubscribe *> *allValues = _mapTable.objectEnumerator.allObjects;
     dispatch_semaphore_signal(_lock);
     if (allValues.count <= 0) {
         // 无订阅者则停止定时器
@@ -82,11 +82,11 @@
         return;
     }
     NSDate *now = [NSDate date];
-    // 遍历执行每个订阅者
-    [allValues enumerateObjectsUsingBlock:^(ZZCountingTimerSubscriber * _Nonnull subscriber, NSUInteger idx, BOOL * _Nonnull stop) {
+    // 执行每个订阅者的回调
+    [allValues enumerateObjectsUsingBlock:^(ZZCountingTimerSubscribe * _Nonnull subscriber, NSUInteger idx, BOOL * _Nonnull stop) {
         if (subscriber.eventHandler && !subscriber.pause) {
-            NSTimeInterval duration = [now timeIntervalSinceDate:subscriber.start];
-            subscriber.eventHandler(subscriber.object, subscriber.start, duration);
+            NSTimeInterval duration = [now timeIntervalSinceDate:subscriber.startDate];
+            subscriber.eventHandler(subscriber.object, subscriber.startDate, duration);
             //NSLog(@"定时操作 self: %p cls: %@ cls: %p", self, NSStringFromClass([subscriber.object class]), subscriber.object);
         }
     }];
@@ -94,9 +94,9 @@
 
 /// MARK: 获取订阅实例对象
 /// @param object 订阅者对象
-- (ZZCountingTimerSubscriber *)subscriberWithObject:(id)object {
+- (ZZCountingTimerSubscribe *)subscriberWithObject:(id)object {
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
-    ZZCountingTimerSubscriber *subscriber = [_mapTable objectForKey:object];
+    ZZCountingTimerSubscribe *subscriber = [_mapTable objectForKey:object];
     dispatch_semaphore_signal(_lock);
     return subscriber;
 }
@@ -114,9 +114,9 @@
         handler(object, date, duration);
     }
     // 将计时事件封装成订阅者对象
-    ZZCountingTimerSubscriber *subscriber = [[ZZCountingTimerSubscriber alloc] init];
+    ZZCountingTimerSubscribe *subscriber = [[ZZCountingTimerSubscribe alloc] init];
     subscriber.object = object;
-    subscriber.start = date;
+    subscriber.startDate = date;
     subscriber.eventHandler = handler;
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
     // 保存订阅者
@@ -138,15 +138,15 @@
     if (!object || !date) return;
     // 获取订阅者
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
-    ZZCountingTimerSubscriber *subscriber = [_mapTable objectForKey:object];
+    ZZCountingTimerSubscribe *subscriber = [_mapTable objectForKey:object];
     // 更新起始日期
-    subscriber.start = date;
+    subscriber.startDate = date;
     dispatch_semaphore_signal(_lock);
     if (!subscriber) return;
     // 执行回调
     if (subscriber.eventHandler) {
         NSTimeInterval duration = [[NSDate date] timeIntervalSinceDate:date];
-        subscriber.eventHandler(subscriber.key, subscriber.start, duration);
+        subscriber.eventHandler(subscriber.object, subscriber.startDate, duration);
     }
     // 检查开启定时器
     [self startTimer];

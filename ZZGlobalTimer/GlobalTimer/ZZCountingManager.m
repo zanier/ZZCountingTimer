@@ -11,8 +11,8 @@
 
 @interface ZZCountingManager () <ZZCountingTimerDelegate> {
     dispatch_semaphore_t _lock;
-    NSMutableDictionary<NSNumber *, ZZCountingTimer *> *_dic; // 保存定时器对象
-    NSMapTable<id, NSMapTable<NSNumber *, ZZCountingTimer *> *> *_mapTable;
+    NSMutableDictionary<NSNumber *, ZZCountingTimer *> *_timerDic; // 保存多个频道的定时器对象
+    NSMapTable<id, NSMapTable<NSNumber *, ZZCountingTimer *> *> *_mapTable; // 订阅者和频道的映射
 }
 
 @property (nonatomic, strong) NSDictionary<NSNumber *, ZZCountingTimer *> *countingTimerDic;
@@ -37,14 +37,14 @@
 - (instancetype)init {
     if (self = [super init]) {
         _lock = dispatch_semaphore_create(1);
-        _dic = [NSMutableDictionary dictionary];
+        _timerDic = [NSMutableDictionary dictionary];
         _mapTable = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsWeakMemory valueOptions:NSPointerFunctionsStrongMemory];
     }
     return self;
 }
   
 - (NSMutableDictionary<NSNumber *,ZZCountingTimer *> *)countingTimerDic {
-    return [_dic copy];
+    return [_timerDic copy];
 }
 
 /// MARK: 查询订阅是否存在
@@ -70,7 +70,7 @@
 /// @param interval 订阅的时间间隔
 - (ZZCountingTimer *)countingTimerWithInterval:(NSTimeInterval)interval {
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
-    ZZCountingTimer *countingTimer = _dic[@(interval)];
+    ZZCountingTimer *countingTimer = _timerDic[@(interval)];
     dispatch_semaphore_signal(_lock);
     return countingTimer;
 }
@@ -80,7 +80,7 @@
 /// @param date 计时的起始时间
 /// @param interval 订阅的时间间隔
 /// @param handler 定时触发的回调
-- (void)addSubscriber:(id)object fireDate:(NSDate *)date interval:(NSTimeInterval)interval eventHandler:(void(^)(id object, NSDate *start, NSTimeInterval duration))handler {
+- (void)addSubscriber:(id)object fireDate:(NSDate *)date interval:(NSTimeInterval)interval eventHandler:(void(^)(id object, NSDate *startDate, NSTimeInterval duration))handler {
     // 参数非空判断
     if (!object || !date || interval <= 0 || !handler) return;
     // 获取定时器
@@ -99,7 +99,7 @@
         [_mapTable setObject:mapTable forKey:object];
     }
     [mapTable setObject:countingTimer forKey:@(interval)];
-    _dic[@(interval)] = countingTimer;
+    _timerDic[@(interval)] = countingTimer;
     dispatch_semaphore_signal(_lock);
     // 开启定时器
     [countingTimer startTimer];
@@ -131,8 +131,8 @@
         // 删除字典
         [_mapTable removeObjectForKey:object];
     }
-    if (countingTimer.count == 0) {
-        _dic[@(countingTimer.interval)] = nil;
+    if (countingTimer.subscriberCount == 0) {
+        _timerDic[@(countingTimer.interval)] = nil;
     }
     dispatch_semaphore_signal(_lock);
 }
@@ -159,7 +159,7 @@
 - (void)removeSubscriberWithInterval:(NSTimeInterval)interval {
     // 获取定时器
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
-    ZZCountingTimer *countingTimer = _dic[@(interval)];
+    ZZCountingTimer *countingTimer = _timerDic[@(interval)];
 //    countingTimer.
     dispatch_semaphore_signal(_lock);
     // 停止定时器
@@ -174,7 +174,7 @@
 - (void)countingTimerDidStopTimer:(ZZCountingTimer *)countingTimer {
     // 移除并释放定时器实例对象
     dispatch_semaphore_wait(_lock, DISPATCH_TIME_FOREVER);
-    [_dic removeObjectForKey:@(countingTimer.interval)];
+    [_timerDic removeObjectForKey:@(countingTimer.interval)];
     dispatch_semaphore_signal(_lock);
 }
 
