@@ -119,7 +119,7 @@
 		3A6ECD0E242790F300722651 /* ZZGlobalTimer */ = {
 			isa = PBXGroup;
 			children = (
-				3A6ECD44242791C100722651 /* GlobalTimer */,
+				3A6ECD44242791C100722651 /* ZZCountingTimer */,
 				3A6ECD0F242790F300722651 /* AppDelegate.h */,
 				3A6ECD10242790F300722651 /* AppDelegate.m */,
 				3A6ECD15242790F300722651 /* ViewController.h */,
@@ -157,7 +157,7 @@
 			path = ZZGlobalTimerUITests;
 			sourceTree = "<group>";
 		};
-		3A6ECD44242791C100722651 /* GlobalTimer */ = {
+		3A6ECD44242791C100722651 /* ZZCountingTimer */ = {
 			isa = PBXGroup;
 			children = (
 				3A6ECD46242791D400722651 /* ZZGCDTimer.h */,
@@ -167,7 +167,7 @@
 				3A6ECD57242908A300722651 /* ZZCountingManager.h */,
 				3A6ECD58242908A300722651 /* ZZCountingManager.m */,
 			);
-			path = GlobalTimer;
+			path = ZZCountingTimer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
