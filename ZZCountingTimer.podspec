@@ -1,5 +1,5 @@
 #
-#  Be sure to run `pod spec lint ZZGlobalTimer.podspec' to ensure this is a
+#  Be sure to run `pod spec lint ZZCountingTimer.podspec' to ensure this is a
 #  valid spec and to remove all comments including this before submitting the spec.
 #
 #  To learn more about Podspec attributes see https://guides.cocoapods.org/syntax/podspec.html
@@ -15,9 +15,9 @@ Pod::Spec.new do |spec|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  spec.name         = "ZZGlobalTimer"
+  spec.name         = "ZZCountingTimer"
   spec.version      = "0.0.1"
-  spec.summary      = "自定义全局计时器工具"
+  spec.summary      = "自定义计时工具"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-				为工程中的计时时间提供便捷的方法，统一管理所有的定时器
+			为项目中的计时事件提供便捷的方法，统一管理工程中的定时器
                    DESC
 
-  spec.homepage     = "https:///github.com/zanier/ZZCountingTimer"
+  spec.homepage     = "https://github.com/zanier/ZZCountingTimer"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -117,11 +117,12 @@ Pod::Spec.new do |spec|
   #  the lib prefix of their name.
   #
 
-  # spec.framework  = "UIKit"
-  spec.frameworks = "UIKit", "Foundation"
+  # spec.framework  = "SomeFramework"
+  # spec.frameworks = "UIKit', 'Foundation"
 
   # spec.library   = "iconv"
   # spec.libraries = "iconv", "xml2"
+
 
   # ――― Project Settings ――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
