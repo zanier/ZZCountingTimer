@@ -17,7 +17,7 @@ Pod::Spec.new do |spec|
 
   spec.name         = "ZZGlobalTimer"
   spec.version      = "0.0.1"
-  spec.summary      = "A short description of ZZGlobalTimer."
+  spec.summary      = "自定义全局计时器工具"
 
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
@@ -25,10 +25,10 @@ Pod::Spec.new do |spec|
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
   spec.description  = <<-DESC
-					自定义全局计时器工具
+				为工程中的计时时间提供便捷的方法，统一管理所有的定时器
                    DESC
 
-  spec.homepage     = "https://github.com:zanier/ZZGlobalTimer"
+  spec.homepage     = "https:///github.com/zanier/ZZCountingTimer"
   # spec.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
 
@@ -129,7 +129,7 @@ Pod::Spec.new do |spec|
   #  where they will only apply to your library. If you depend on other Podspecs
   #  you can include multiple dependencies to ensure it works.
 
-  # spec.requires_arc = true
+  spec.requires_arc = true
 
   # spec.xcconfig = { "HEADER_SEARCH_PATHS" => "$(SDKROOT)/usr/include/libxml2" }
   # spec.dependency "JSONKit", "~> 1.4"
